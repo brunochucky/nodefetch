@@ -1,0 +1,27 @@
+doctype html
+html(lang='pt-br')
+  head
+    include head.jade
+  body
+    include ./navbar.jade
+        
+    .container
+      include ./blogheader.jade
+
+      .row
+        .blog-main
+          .blog-post
+            h2.blog-post-title!= vlink
+            
+            if vlink = 'Adicionar nova rota2'
+            br
+            form#formfetch(action='/fetch',method='GET')
+              input.form-control(type='text',placeholder='URL',name='q')
+              br
+              input.form-control(type='text',placeholder='Categoria',name='cat')
+              br
+              input.form-control(type='text',placeholder='Slug',name='dirslug')
+              br
+              button.form-control.btn.btn-primary(type='submit') Enviar
+              
+    include ./footer.jade

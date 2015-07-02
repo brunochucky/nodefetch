@@ -1,0 +1,18 @@
+doctype html
+html(lang='pt-br')
+  head
+    include head.jade
+  body
+    include ./navbar.jade
+        
+    .container
+      .blog-header
+        h1.blog-title #{page_title}
+        
+      .blog-main
+        .blog-post
+          h2.blog-post-title #{first_heading}
+          section
+            p!= page_body
+
+    include ./footer.jade

@@ -1,0 +1,50 @@
+{
+  "name": "oMelhor-NodeApp",
+  "version": "1.0.0",
+  "description": "Sample Application",
+  "keywords": [
+    "oMelhor",
+    "Node.js",
+    "application",
+    "web"
+  ],
+  "author": {
+    "name": "Emancipa",
+    "email": "bruno@emancipa.com.br",
+    "url": "http://www.emancipa.com.br/"
+  },
+  "homepage": "http://www.emancipa.com.br/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "express": "*",
+    "request": "*",
+    "jade": "*",
+    "path": "*",
+    "cheerio": "*",
+    "node-fs": "*"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "readme": "The OpenShift `nodejs` cartridge documentation can be found at:\n\nhttp://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs\n",
+  "readmeFilename": "README.md",
+  "gitHead": "d08af361d4e6d3ecffe66b6783a866d78822aeaa",
+  "bugs": {
+    "url": "https://github.com/openshift/origin-server/issues"
+  },
+  "_id": "oMelhor-NodeApp@1.0.0",
+  "_shasum": "9b181d692007875e32c70566e3040be5a5ad87b8",
+  "_from": "node_modules/oMelhor-NodeApp",
+  "_resolved": "file:node_modules/oMelhor-NodeApp"
+}

@@ -1,0 +1,22 @@
+doctype html
+html(lang='pt-br')
+  head
+    include head.jade
+  body
+    include ./navbar.jade           
+        
+    .container
+      include ./blogheader.jade
+
+      
+      .row
+        .col-sm-8.blog-main
+          each post in recent_posts
+            .blog-post
+              a(href='/'+post['slug'])
+                h2= post['label']
+                p= post['excerpt']
+        
+        include ./sidebar.jade
+
+    include ./footer.jade
