@@ -46,7 +46,7 @@ var NodeFetch = function() {
      self.create_file = function(dirslug, data, mkdir) {
         if(mkdir === true) {
             try{
-                nfs.mkdirSync(dirslug, 0755, true); 
+                nfs.mkdirSync(dirslug, 0755); 
             } catch(e) {
                 console.log('ERROR:::: '+e);
             }
@@ -180,7 +180,6 @@ var NodeFetch = function() {
 
         self.routes['/:category/'] = function(req, res) {            
             var category = (req.params.category ? req.params.category : 'web');
-            var catArray = [];
             var postArray = [];
             var catSlug = self.app.pub+'/'+category;
             var catItems = nfs.readdirSync(catSlug);
@@ -193,7 +192,6 @@ var NodeFetch = function() {
                 var $ = cheerio.load(file);
                 var excerpt = $('body p').first().text().substr(0,100)+'[...]';
                 postArray.push({'label':catItems[j].replace(/\-/g,' '),'slug':slug,'excerpt':excerpt});
-                
             }                         
                             
             
