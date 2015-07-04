@@ -46,7 +46,7 @@ var NodeFetch = function() {
      self.create_file = function(dirslug, data, mkdir) {
         if(mkdir === true) {
             try{
-                nfs.mkdirSync(dirslug, 0755); 
+                nfs.mkdirSync(dirslug, 0755, true); 
             } catch(e) {
                 console.log('ERROR:::: '+e);
             }
