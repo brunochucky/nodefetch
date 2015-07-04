@@ -13,7 +13,6 @@ html(lang='pt-br')
           .blog-post
             h2.blog-post-title!= vlink
             
-            if vlink = 'Adicionar nova rota2'
             br
             form#formfetch(action='/fetch',method='GET')
               input.form-control(type='text',placeholder='URL',name='q')
